@@ -6,7 +6,7 @@
   "author": "JuniorN1 <junior_e.a.o@hotmail.com>",
   "license": "MIT",
   "scripts":{
-    "dev":"ts-node-dev --transpile-only src/server.ts"
+    "dev":"ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts"
 
   },
   "dependencies": {
