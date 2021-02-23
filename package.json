@@ -5,12 +5,13 @@
   "repository": "https://github.com/JuniorN1/NextLevelWeek4.git",
   "author": "JuniorN1 <junior_e.a.o@hotmail.com>",
   "license": "MIT",
-  "scripts":{
-    "dev":"ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts"
-
+  "scripts": {
+    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.31"
   },
   "devDependencies": {
     "@types/express": "^4.17.11",
