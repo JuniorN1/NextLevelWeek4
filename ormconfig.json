@@ -3,6 +3,7 @@
     "database": "./src/database/database.sql",
     "migrations":["./src/database/migrations/**.ts"],
     "entities":["./src/model/**.ts"],
+    "logging":true,
     "cli":{
         "migrationsDir":"./src/database/migrations"
     }
