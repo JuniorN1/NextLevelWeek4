@@ -15,8 +15,18 @@ describe("User", ()=>{
                 name:"User name"
             }
         );
-        expect(response.status).toBe(201)
+        expect(response.status).toBe(201);
     });
-   
-  
+   it("should not be able to create a user if with exist email",async ()=>{
+        const response = await request(app)
+        .post("/users")
+        .send(
+            {
+                email:"Alou@gmail.com",
+                name:"User name"
+            }
+        );
+        expect(response.status).toBe(400);
+    });
+    
 });
