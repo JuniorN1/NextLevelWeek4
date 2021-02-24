@@ -15,8 +15,8 @@ class SurveysController{
     }
     async show(request:Request,response:Response) {
         const surveysRepository =getCustomRepository(SurveysRepository);
-        const all = await surveysRepository.find()
-        return response.json(all)
+        const all = await surveysRepository.find();
+        return response.json(all);
     }
 
 }
