@@ -16,6 +16,7 @@ describe("User", ()=>{
             }
         );
         expect(response.status).toBe(201);
+        expect(response.body).toHaveProperty("id");
     });
    it("should not be able to create a user if with exist email",async ()=>{
         const response = await request(app)
@@ -27,6 +28,7 @@ describe("User", ()=>{
             }
         );
         expect(response.status).toBe(400);
+
     });
     
 });
