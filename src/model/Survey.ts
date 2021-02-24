@@ -1,6 +1,6 @@
 import {Column, CreateDateColumn, Entity, PrimaryColumn} from "typeorm";
 import { v4 as uuid} from 'uuid';
-class Survy{
+class Survey{
     @PrimaryColumn()
     readonly id: string;
     @Column()
@@ -18,4 +18,4 @@ class Survy{
 }
 
 
-export { Survy }
+export { Survey }
