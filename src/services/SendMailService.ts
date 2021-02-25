@@ -22,12 +22,12 @@ class SendMailService{
      
         const templateFileContent = fs.readFileSync(path).toString('utf8');
         const mailTemplateParse = handlesbars.compile(templateFileContent);
-        const html = mailTemplateParse(variabel)
+        const sendHtml = mailTemplateParse(variabel)
         const message = await this.client.sendMail(
             {
                 to,
                 subject,
-                html:html,
+                html:sendHtml,
                 from:"NPS <norelay@nps.com.br>"
             }
         )
