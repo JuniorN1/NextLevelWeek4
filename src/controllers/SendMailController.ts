@@ -40,7 +40,7 @@ class SendMailController{
             title:surveyAltradyExists.title,
             description:surveyAltradyExists.description,
             user_id:userAlreadyExists.id,
-            link:"http://localhost:3333/answers"
+            link:process.env.URL_MAIL
 
 
         }
