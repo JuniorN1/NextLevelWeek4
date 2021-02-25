@@ -29,6 +29,7 @@ class SendMailService{
                 subject,
                 html:sendHtml,
                 from:"NPS <norelay@nps.com.br>"
+           
             }
         )
         console.log("Message sent: %s", message.messageId);

@@ -38,7 +38,10 @@ class SendMailController{
         const variabel ={
             name:userAlreadyExists.name,
             title:surveyAltradyExists.title,
-            description:surveyAltradyExists.description
+            description:surveyAltradyExists.description,
+            user_id:userAlreadyExists.id,
+            link:"http://localhost:3333/answers"
+
 
         }
         await surveysUserRepository.save(SurveyUser);
