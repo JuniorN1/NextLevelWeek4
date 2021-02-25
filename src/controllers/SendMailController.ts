@@ -34,7 +34,7 @@ class SendMailController{
             }
         )
         await surveysUserRepository.save(SurveyUser);
-        await SendMailService.execute(email,surveyAltradyExists.title,surveyAltradyExists.description)
+        await SendMailService.execute(email,surveyAltradyExists.title,surveyAltradyExists.description);
         return response.status(201).json({
             info:SurveyUser
         })
