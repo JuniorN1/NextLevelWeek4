@@ -1,4 +1,5 @@
 import request from 'supertest'
+import { getConnection } from 'typeorm';
 import { app } from '../app'
 import createConnection from '../database';
 describe("User", ()=>{
