@@ -19,8 +19,7 @@ class AnswerController{
             }
         );
         if(!surveysUser){     
-            throw new AppError("Survey User des not exists or has already been evaluated!",400);     
-           
+            throw new AppError("Survey User des not exists or has already been evaluated!");    
         }
         surveysUser.value= Number(value);
 
