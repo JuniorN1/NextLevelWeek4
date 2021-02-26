@@ -12,13 +12,14 @@ class AnswerController{
         const surveysUserRepository = getCustomRepository(SurveysUserRepository);
         const surveysUser = await surveysUserRepository.findOne(
             {
-                id:String(u)
+                id:String(u),
+                value:null
 
             }
         );
         if(!surveysUser){          
             return response.status(400).json({
-                error : "Survey User des not exists!"
+                error : "Survey User des not exists or has already been evaluated!"
             })
         }
         surveysUser.value= Number(value);
