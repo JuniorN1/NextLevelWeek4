@@ -31,11 +31,12 @@ class SendMailController{
             where:{user_id:userAlreadyExists.id,survey_id:surveyAlreadyExists.id,value:null},
             relations:["user","survey"]
         });
+ 
         const variabel ={
             name:userAlreadyExists.name,
             title:surveyAlreadyExists.title,
             description:surveyAlreadyExists.description,
-            user_id:userAlreadyExists.id,
+            id:surveyAlreadyExists.id,
             link:process.env.URL_MAIL
 
             
