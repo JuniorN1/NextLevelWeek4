@@ -14,10 +14,11 @@ class UserController{
             name:yup.string().required(),
             email:yup.string().email().required(),
         })
-        if(!(await schema.isValid(request.body))){
-            return response.status(400).json({
-                error:"Validation Failed!"
-            })
+      
+        try{
+            await schema.validate(request.body,{abortEarly:false});
+        }catch(err){
+            return response.json({err})
         }
         const userRepository = getCustomRepository(UsersRepository);
         const userAlreadyExists = await userRepository.findOne({
