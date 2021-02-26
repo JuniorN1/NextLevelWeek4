@@ -78,7 +78,7 @@ GET => http://localhost:3333/answers/nota?u=id
   "u": "46ade43b-b3eb-43ca-8e3d-e9e67a21d1c6"
 }
 ```
-<br/>
+
 GET => http://localhost:3333/nps/:survey_id
 ```json
  parâmetros{
