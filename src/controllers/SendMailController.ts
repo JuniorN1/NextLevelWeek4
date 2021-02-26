@@ -24,9 +24,8 @@ class SendMailController{
      
         const surveyAlreadyExists = await surveysRepository.findOne({id:survey_id});
         if(!surveyAlreadyExists){
-            return response.status(400).json({
-                error:"Survey does not Exist"
-            })
+            throw new AppError("Survey does not Exist!"); 
+           
         }
  
         const surveyUserAlreadyExist = await surveysUserRepository.findOne({
