@@ -19,8 +19,8 @@ class UserController{
         try{
             await schema.validate(request.body,{abortEarly:false});
         }catch(err){
-   
-            return response.status(400).json({err})
+            throw new AppError(err); 
+           
         }
         const userRepository = getCustomRepository(UsersRepository);
         const userAlreadyExists = await userRepository.findOne({
