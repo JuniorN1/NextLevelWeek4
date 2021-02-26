@@ -16,5 +16,5 @@ router.post('/surveys',surveysController.create);
 router.get('/surveys',surveysController.show); 
 router.post('/sendMail',surveyUserController.execute);  
 router.get('/answers/:value',answerController.execute); 
-router.get('/nps',npsController.execute); 
+router.get('/nps/:survey_id',npsController.execute); 
 export { router };
