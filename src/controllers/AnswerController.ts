@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { getCustomRepository } from "typeorm";
+import { AppError } from "../errors/AppError";
 
 import { SurveysUserRepository } from "../repositories/SurveysUserRepository";
 class AnswerController{
@@ -17,10 +18,9 @@ class AnswerController{
 
             }
         );
-        if(!surveysUser){          
-            return response.status(400).json({
-                error : "Survey User des not exists or has already been evaluated!"
-            })
+        if(!surveysUser){     
+            throw new AppError("Survey User des not exists or has already been evaluated!",400);     
+           
         }
         surveysUser.value= Number(value);
 
