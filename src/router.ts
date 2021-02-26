@@ -12,6 +12,6 @@ const answerController = new AnswerController()
 router.post('/users',userController.create);  
 router.post('/surveys',surveysController.create);  
 router.get('/surveys',surveysController.show); 
-router.post('/sendMail',surveyUserController.execulte);  
+router.post('/sendMail',surveyUserController.execute);  
 router.get('/answer',answerController.execute); 
 export { router };

@@ -6,7 +6,7 @@ import { SurveysUserRepository } from "../repositories/SurveysUserRepository";
 import { UsersRepository } from "../repositories/UsersRepository";
 import SendMailService from "../services/SendMailService";
 class SendMailController{
-    async execulte(request:Request,response:Response){
+    async execute(request:Request,response:Response){
         const {email,survey_id} = request.body;
      
         const surveysRepository =getCustomRepository(SurveysRepository);
