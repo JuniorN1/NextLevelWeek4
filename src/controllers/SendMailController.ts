@@ -36,7 +36,7 @@ class SendMailController{
             name:userAlreadyExists.name,
             title:surveyAlreadyExists.title,
             description:surveyAlreadyExists.description,
-            id:surveyAlreadyExists.id,
+            id:surveyUserAlreadyExist.id,
             link:process.env.URL_MAIL
 
             

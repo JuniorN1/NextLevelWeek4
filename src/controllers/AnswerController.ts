@@ -8,15 +8,17 @@ class AnswerController{
         const {value} = request.params;
         const {u}   =request.query;
 
-      
+ 
         const surveysUserRepository = getCustomRepository(SurveysUserRepository);
         const surveyUser = await surveysUserRepository.findOne(
             {
-                id:String(u),
+                id:String(u)
 
             }
         );
+       
         if(!surveyUser){
+            console.log(surveyUser)
             return response.status(400).json({
                 error : "Survey User des not exists!"
             })
