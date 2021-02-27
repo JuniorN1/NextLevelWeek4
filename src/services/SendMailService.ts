@@ -9,10 +9,10 @@ class SendMailService{
             let transporter = nodemailer.createTransport({
                 host: account.smtp.host,
                 port: account.smtp.port,
-                secure: account.smtp.secure, // true for 465, false for other ports
+                secure: account.smtp.secure, 
                 auth: {
-                  user: account.user, // generated ethereal user
-                  pass: account.pass, // generated ethereal password
+                  user: account.user, 
+                  pass: account.pass, 
                 },
               });
             this.client = transporter;

@@ -6,16 +6,26 @@
         align-content: center;
         display: flex;
         flex-direction: column;
+        background: rgb(26, 26, 26);
+        color: rgb(208, 208, 208);
+        font-weight: bold;
+       
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
     }
     .value{
         padding: 10px;
-        background: #8257e6;
+        background: #7f4ef2;
         color: #fff;
         border-radius: 6px;
         width: 15px;
         text-align: center;
         text-decoration: none;
         
+    }
+    .image{
+        left: 30px;
+        position: absolute;
     }
     .level{
         display: flex;
@@ -34,6 +44,8 @@
     }
 </style>
 <div class="container">
+    <br/>
+    <img class="image" src="https://i.imgur.com/EHrLUX9.png" width="150px" />
     <label >Olá <strong>{{name}}</strong>! Tudo bem?</label>
     <h3>{{Title}}</h3>
     <br/>
